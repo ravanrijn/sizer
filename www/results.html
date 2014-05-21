@@ -19,108 +19,113 @@
 -->
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <style type="text/css">
-          .result {
-            display: table;
-            width: 100%;
-          }
-          .result-row {
-            display: table-row;
-            background: #fff;
-          }
-          .result-image {
-            display: table-cell;
-            background: #fff;
-            height: 100%;
-            border: 1px solid #ccc;
-          }
-          .result-image img {
-            width: 100px
-          }
-          .result-description {
-            display: table-cell;
-            vertical-align: top;
-            background: #fff;
-            border: 1px solid #ccc;
-          }
-          .result-description h1 {
-            text-align: left;
-            color: #fff;
-            background: #f00;
-            font-size: 20px;
-          }
-          .result-description h2 {
-            font-size: 14px;
-          }
-          .result-description p {
-            font-size: 11px;
-          }
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <style>
+          body { padding-top: 70px; }
+          .row { border-top: 1px solid #ccc; }
         </style>
         <title>Results</title>
     </head>
     <body>
-        <div class="result">
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro2.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 2 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Sizer</a>
           </div>
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro3.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 3 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
-          </div>
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro5.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 5 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
-          </div>
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro6.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 6 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
-          </div>
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro9.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 9 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
-          </div>
-          <div class="result-row">
-            <div class="result-image"><img src="img/shoes/retro10.jpg"></div>
-            <div class="result-description">
-              <h1>Air Jordan 10 Retro</h1>
-              <h2>Comfortable tribute to a legend</h2>
-              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
-            </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
           </div>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript">
-          $(document).ready(function() {
-            $('.result-row').click(function() {
-              window.location.href = "try.html"
-            })
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro2.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 2 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro3.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 3 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro5.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 5 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro6.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 6 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro9.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 9 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/shoes/retro10.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Air Jordan 10 Retro</h5>
+            <h5><small>Comfortable tribute to a legend</small></h5>
+            <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="phonegap.js"></script>
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('.row').click(function() {
+            window.location.href = "try.html"
           })
-        </script>
+        })
+      </script>
     </body>
 </html>
