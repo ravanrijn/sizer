@@ -93,7 +93,7 @@
           <div class="col-xs-10 col-xs-offset-1 text-center">
             <div class="btn-group">
               <button id="smaller" type="button" class="btn btn-default">-</button>
-              <button id="size" type="button" class="btn btn-default">44</button>
+              <button id="size" type="button" class="btn btn-default">45</button>
               <button id="bigger" type="button" class="btn btn-default">+</button>
             </div>
           </div>
@@ -105,7 +105,7 @@
       <script src="js/bootstrap.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function() {
-          var size = 44;
+          var size = 45;
           var height = 250;
           var top = 17;
           var left = 106;
@@ -122,8 +122,10 @@
             size = size - 1;
             $('#size').html(size);
 
-            if (size <= 46) {
+            if (size < 47) {
               sole.attr("src", "img/inner_sole-not-fit-sketch.png")
+            } else if (size == 47) {
+              sole.attr("src", "img/inner_sole-fit-sketch.png")
             }
           });
           $('#bigger').click(function() {
@@ -139,8 +141,10 @@
             size = size + 1;
             $('#size').html(size);
 
-            if (size > 46) {
+            if (size == 47) {
               sole.attr("src", "img/inner_sole-fit-sketch.png")
+            } else if(size > 47) {
+              sole.attr("src", "img/inner_sole-sketch.png")
             }
           });
         });
