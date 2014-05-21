@@ -38,8 +38,8 @@
           #sole {
             position: absolute;
             height: 250px;
-            top: 20px;
-            left: 102px;
+            top: 17px;
+            left: 106px;
           }
         </style>
         <title>Results</title>
@@ -84,7 +84,7 @@
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well">
               <div class="fixed">
-                <img id="foot" src="img/foot.jpg"></img>
+                <img id="foot" src="img/foot.png"></img>
                 <img id="sole" src="img/inner_sole-not-fit-sketch.png"></img>
               </div>
             </div>
@@ -94,7 +94,7 @@
           <div class="col-xs-10 col-xs-offset-1 text-center">
             <div class="btn-group">
               <button id="smaller" type="button" class="btn btn-default">-</button>
-              <button id="size" type="button" class="btn btn-default">42</button>
+              <button id="size" type="button" class="btn btn-default">44</button>
               <button id="bigger" type="button" class="btn btn-default">+</button>
             </div>
           </div>
@@ -106,14 +106,14 @@
       <script src="js/bootstrap.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function() {
-          var size = 42;
+          var size = 44;
           var height = 250;
-          var top = 20;
-          var left = 102;
+          var top = 17;
+          var left = 106;
           $('#smaller').click(function() {
             height -= 4;
             top += 1;
-            left += 1;
+            left += 2;
 
             var sole = $('#sole');
             sole.css("height", height);
@@ -123,14 +123,14 @@
             size = size - 1;
             $('#size').html(size);
 
-            if (size <= 45) {
+            if (size <= 46) {
               sole.attr("src", "img/inner_sole-not-fit-sketch.png")
             }
           });
           $('#bigger').click(function() {
             height += 4;
             top -= 1;
-            left -= 1;
+            left -= 2;
 
             var sole = $('#sole');
             sole.css("height", height);
@@ -140,7 +140,7 @@
             size = size + 1;
             $('#size').html(size);
 
-            if (size > 45) {
+            if (size > 46) {
               sole.attr("src", "img/inner_sole-fit-sketch.png")
             }
           });
