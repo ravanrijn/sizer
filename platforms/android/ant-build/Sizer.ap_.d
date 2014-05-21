@@ -28,8 +28,10 @@
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/results.html \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/spec \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/spec.html \
+/Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/try.html \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/css/index.css \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/cameraoverlay \
+/Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/inner_sole.jpg \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/logo.png \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/cameraoverlay/border_bottom_left.png \
@@ -39,10 +41,13 @@
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/cameraoverlay/capture_button.png \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/cameraoverlay/capture_button_pressed.png \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro10.jpg \
+/Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro2.jpg \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro3.jpg \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro5.jpg \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro6.jpg \
+/Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/img/shoes/retro9.jpg \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/js/index.js \
+/Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/js/jquery-2.1.1.min.js \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/res/icon \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/res/screen \
 /Users/rvanrijn/dev/phonegap/sizer/platforms/android/assets/www/res/icon/android \
