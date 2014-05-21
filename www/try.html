@@ -60,6 +60,9 @@
       </nav>
 
       <div class="container-fluid">
+        <div class="row text-center">
+          <h5>Jordan 5 Retro</h5>
+        </div>
         <div class="row">
           <div class="col-xs-6 text-center">
             <img src="img/shoes/retro10.jpg" class="img-rounded img-responsive">
@@ -72,7 +75,7 @@
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well text-center">
               <img id="foot" src="img/foot.jpg"></img>
-              <img id="sole" src="img/inner_sole-sketch.png"></img>
+              <img id="sole" src="img/inner_sole-not-fit-sketch.png"></img>
             </div>
           </div>
         </div>
@@ -108,6 +111,10 @@
 
             size = size - 1;
             $('#size').html(size);
+
+            if (size <= 45) {
+              sole.attr("src", "img/inner_sole-not-fit-sketch.png")
+            }
           });
           $('#bigger').click(function() {
             height += 4;
@@ -121,6 +128,10 @@
 
             size = size + 1;
             $('#size').html(size);
+
+            if (size > 45) {
+              sole.attr("src", "img/inner_sole-sketch.png")
+            }
           });
         });
         </script>
