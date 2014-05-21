@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+          body { padding-top: 70px; }
+          .fixed {
+            height: 250px;
+            width: 250px;
+          }
+          #foot {
+            position: absolute;
+            height: 250px;
+            top: 20px;
+            left: 100px;
+          }
+          #sole {
+            position: absolute;
+            height: 250px;
+            top: 17px;
+            left: 106px;
+          }
+          #buy {
+            display: none;
+          }
+        </style>
+        <title>Results</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Sizer</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row text-center">
+          <h5>Jordan 5 Retro</h5>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 text-center col-xs-offset-2">
+            <img src="img/shoes/retro5.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-4 text-center">
+            <img src="img/shoes/retro5-bottom.jpg" class="img-rounded img-responsive">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="well">
+              <div class="fixed">
+                <img id="foot" src="img/foot.png"></img>
+                <img id="sole" src="img/inner_sole-not-fit-sketch.png"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 text-center">
+            <div class="btn-group">
+              <button id="smaller" type="button" class="btn btn-default">-</button>
+              <button id="size" type="button" class="btn btn-danger">43</button>
+              <button id="bigger" type="button" class="btn btn-default">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          &nbsp;
+        </div>
+        <div id="buy" class="row">
+          <div class="col-xs-10 col-xs-offset-1 text-center">
+            <button class="btn btn-primary btn-lg">Buy</button>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="phonegap.js"></script>
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          var size = 43;
+          var height = 250;
+          var top = 17;
+          var left = 106;
+          $('#smaller').click(function() {
+            height -= 4;
+            top += 1;
+            left += 2;
+
+            var sole = $('#sole');
+            sole.css("height", height);
+            sole.css("left", left);
+            sole.css("top", top);
+
+            size = size - 1;
+            $('#size').html(size);
+
+            if (size < 45) {
+              sole.attr("src", "img/inner_sole-not-fit-sketch.png")
+              $('#size').attr("class", "btn btn-danger")
+              $('#buy').attr("style", "display: none;")
+            } else if (size == 45) {
+              sole.attr("src", "img/inner_sole-fit-sketch.png")
+              $('#size').attr("class", "btn btn-success")
+              $('#buy').attr("style", "display: block;")
+            }
+          });
+          $('#bigger').click(function() {
+            height += 4;
+            top -= 1;
+            left -= 2;
+
+            var sole = $('#sole');
+            sole.css("height", height);
+            sole.css("left", left);
+            sole.css("top", top);
+
+            size = size + 1;
+            $('#size').html(size);
+
+            if (size == 45) {
+              sole.attr("src", "img/inner_sole-fit-sketch.png")
+              $('#size').attr("class", "btn btn-success")
+              $('#buy').attr("style", "display: block;")
+            } else if(size > 45) {
+              sole.attr("src", "img/inner_sole-sketch.png")
+              $('#size').attr("class", "btn btn-danger")
+              $('#buy').attr("style", "display: none;")
+            }
+          });
+        });
+        </script>
+    </body>
+</html>
