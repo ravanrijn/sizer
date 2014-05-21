@@ -41,6 +41,9 @@
             top: 17px;
             left: 106px;
           }
+          #buy {
+            display: none;
+          }
         </style>
         <title>Results</title>
     </head>
@@ -93,9 +96,17 @@
           <div class="col-xs-10 col-xs-offset-1 text-center">
             <div class="btn-group">
               <button id="smaller" type="button" class="btn btn-default">-</button>
-              <button id="size" type="button" class="btn btn-default">45</button>
+              <button id="size" type="button" class="btn btn-danger">45</button>
               <button id="bigger" type="button" class="btn btn-default">+</button>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          &nbsp;
+        </div>
+        <div id="buy" class="row">
+          <div class="col-xs-10 col-xs-offset-1 text-center">
+            <button class="btn btn-primary btn-lg">Buy</button>
           </div>
         </div>
       </div>
@@ -124,8 +135,12 @@
 
             if (size < 47) {
               sole.attr("src", "img/inner_sole-not-fit-sketch.png")
+              $('#size').attr("class", "btn btn-danger")
+              $('#buy').attr("style", "display: none;")
             } else if (size == 47) {
               sole.attr("src", "img/inner_sole-fit-sketch.png")
+              $('#size').attr("class", "btn btn-success")
+              $('#buy').attr("style", "display: block;")
             }
           });
           $('#bigger').click(function() {
@@ -143,8 +158,12 @@
 
             if (size == 47) {
               sole.attr("src", "img/inner_sole-fit-sketch.png")
+              $('#size').attr("class", "btn btn-success")
+              $('#buy').attr("style", "display: block;")
             } else if(size > 47) {
               sole.attr("src", "img/inner_sole-sketch.png")
+              $('#size').attr("class", "btn btn-danger")
+              $('#buy').attr("style", "display: none;")
             }
           });
         });
