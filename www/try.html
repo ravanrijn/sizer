@@ -25,12 +25,21 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
           body { padding-top: 70px; }
-          #foot { height: 250px; }
+          .fixed {
+            height: 300px;
+            width: 300px;
+          }
+          #foot {
+            position: absolute;
+            height: 250px;
+            top: 20px;
+            left: 100px;
+          }
           #sole {
             position: absolute;
             height: 250px;
             top: 20px;
-            left: 120px;
+            left: 102px;
           }
         </style>
         <title>Results</title>
@@ -64,18 +73,20 @@
           <h5>Jordan 5 Retro</h5>
         </div>
         <div class="row">
-          <div class="col-xs-6 text-center">
+          <div class="col-xs-4 text-center col-xs-offset-2">
             <img src="img/shoes/retro10.jpg" class="img-rounded img-responsive">
           </div>
-          <div class="col-xs-6 text-center">
+          <div class="col-xs-4 text-center">
             <img src="img/shoes/retro10-bottom.jpg" class="img-rounded img-responsive">
           </div>
         </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <div class="well text-center">
-              <img id="foot" src="img/foot.jpg"></img>
-              <img id="sole" src="img/inner_sole-not-fit-sketch.png"></img>
+            <div class="well">
+              <div class="fixed">
+                <img id="foot" src="img/foot.jpg"></img>
+                <img id="sole" src="img/inner_sole-not-fit-sketch.png"></img>
+              </div>
             </div>
           </div>
         </div>
@@ -98,11 +109,11 @@
           var size = 42;
           var height = 250;
           var top = 20;
-          var left = 120;
+          var left = 102;
           $('#smaller').click(function() {
             height -= 4;
-            top += 2;
-            left += 2;
+            top += 1;
+            left += 1;
 
             var sole = $('#sole');
             sole.css("height", height);
@@ -118,8 +129,8 @@
           });
           $('#bigger').click(function() {
             height += 4;
-            top -= 2;
-            left -= 2;
+            top -= 1;
+            left -= 1;
 
             var sole = $('#sole');
             sole.css("height", height);
@@ -130,7 +141,7 @@
             $('#size').html(size);
 
             if (size > 45) {
-              sole.attr("src", "img/inner_sole-sketch.png")
+              sole.attr("src", "img/inner_sole-fit-sketch.png")
             }
           });
         });
