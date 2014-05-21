@@ -23,13 +23,104 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <style type="text/css">
+          .result {
+            display: table;
+            width: 100%;
+          }
+          .result-row {
+            display: table-row;
+            background: #fff;
+          }
+          .result-image {
+            display: table-cell;
+            background: #fff;
+            height: 100%;
+            border: 1px solid #ccc;
+          }
+          .result-image img {
+            width: 100px
+          }
+          .result-description {
+            display: table-cell;
+            vertical-align: top;
+            background: #fff;
+            border: 1px solid #ccc;
+          }
+          .result-description h1 {
+            text-align: left;
+            color: #fff;
+            background: #f00;
+            font-size: 20px;
+          }
+          .result-description h2 {
+            font-size: 14px;
+          }
+          .result-description p {
+            font-size: 11px;
+          }
+        </style>
         <title>Results</title>
     </head>
     <body>
-        
+        <div class="result">
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro2.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 2 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro3.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 3 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro5.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 5 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro6.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 6 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro9.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 9 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-image"><img src="img/shoes/retro10.jpg"></div>
+            <div class="result-description">
+              <h1>Air Jordan 10 Retro</h1>
+              <h2>Comfortable tribute to a legend</h2>
+              <p>In 1988, while wearing the original Air Jordan III, Mike earned his second dunk title, locked down league MVP and was named Defensive Player of the Year.</p>
+            </div>
+          </div>
+        </div>
         <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript">
-
+          $(document).ready(function() {
+            $('.result-row').click(function() {
+              window.location.href = "try.html"
+            })
+          })
         </script>
     </body>
 </html>
