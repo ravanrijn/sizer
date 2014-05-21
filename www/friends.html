@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
           body { padding-top: 70px; }
+          .row { border-top: 1px solid #ccc; }
         </style>
         <title>Results</title>
     </head>
@@ -52,40 +53,40 @@
       </nav>
 
       <div class="container-fluid">
-        <div class="row text-center">
-          <h5>Jordan 10 Retro</h5>
-        </div>
         <div class="row">
-          <div class="col-xs-4 text-center col-xs-offset-2">
-            <img src="img/shoes/retro10.jpg" class="img-rounded img-responsive">
+          <div class="col-xs-4">
+            <img src="img/friends/ronald.jpg" class="img-rounded img-responsive">
           </div>
-          <div class="col-xs-4 text-center">
-            <img src="img/shoes/retro10-bottom.jpg" class="img-rounded img-responsive">
+          <div class="col-xs-8">
+            <h5>Ronald</h5>
+            <p><strong>Likes:</strong> Jordan 5 Retro</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
-            <h5><small>The Air Jordan Retro 10: A legend of the game</small></h5>
-            <p>Soft leather and lightweight cushioning offer superb comfort in the Air Jordan Retro 10 Men's Shoe. Designed for durability in a sleek court profile, this shoe brings a game-day look to the streets with the same premium detail as the original.</p>
-            <h5><small>Benefits</small></h5>
-            <p>
-              <ul>
-                <li>Soft split-grain leather upper for premium durability and comfort</li>
-                <li>EVA sockliner helps absorb shock and improves fit and feel</li>
-                <li>Cushioning at the collar for ankle protection and comfort</li>
-              </ul>
-            </p>
+          <div class="col-xs-4">
+            <img src="img/friends/robin.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Robin</h5>
+            <p><strong>Likes:</strong> Sandals</p>
           </div>
         </div>
-        <div id="buy" class="row">
-          <div class="col-xs-2 col-xs-offset-3">
-            <button class="btn btn-primary btn-lg" onclick="javascript:window.location.href='try.html'">Try</button>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/friends/david.jpg" class="img-rounded img-responsive">
           </div>
-          <div class="col-xs-2">
-            <button class="btn btn-default btn-lg">Buy</button>
+          <div class="col-xs-8">
+            <h5>David</h5>
+            <p><strong>Likes:</strong> Race shoes</p>
           </div>
-          <div class="col-xs-2">
-            <button class="btn btn-default btn-lg" onclick="javascript:window.location.href='friends.html'">Gift</button>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/friends/harm.jpg" class="img-rounded img-responsive">
+          </div>
+          <div class="col-xs-8">
+            <h5>Harm</h5>
+            <p><strong>Likes:</strong> Skate shoes</p>
           </div>
         </div>
       </div>
@@ -95,8 +96,10 @@
       <script src="js/bootstrap.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function() {
-
-        });
-        </script>
+          $('.row').click(function() {
+            window.location.href = "try2.html"
+          })
+        })
+      </script>
     </body>
 </html>
