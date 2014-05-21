@@ -89,6 +89,10 @@
         function success(fileUri) {
           alert("File location: " + fileUri);
           localstorage.setItem('file', fileUri);
+          var largeImage = document.getElementById('largeImage');
+          largeImage.style.display = 'block';
+          largeImage.src = fileUri;
+          alert(localstorage.getItem('file'));
         }, 
         function failure(error) {
             alert(error);
