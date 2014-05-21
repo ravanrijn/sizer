@@ -87,12 +87,7 @@
     function myCustomCamera() {
       navigator.customCamera.getPicture('bla.png', 
         function success(fileUri) {
-          alert("File location: " + fileUri);
-          localstorage.setItem('file', fileUri);
-          var largeImage = document.getElementById('largeImage');
-          largeImage.style.display = 'block';
-          largeImage.src = fileUri;
-          alert(localstorage.getItem('file'));
+          alert("Success! You can now try our shoes online.");
         }, 
         function failure(error) {
             alert(error);
