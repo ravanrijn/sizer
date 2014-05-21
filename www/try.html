@@ -23,12 +23,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <style>
           body { padding-top: 70px; }
           #foot { height: 250px; }
           #sole {
             position: absolute;
+            height: 250px;
+            top: 20px;
             left: 120px;
           }
         </style>
@@ -71,7 +72,7 @@
           <div class="col-xs-10 col-xs-offset-1">
             <div class="well text-center">
               <img id="foot" src="img/foot.jpg"></img>
-              <img id="sole" src="img/inner_sole-sketch.jpg"></img>
+              <img id="sole" src="img/inner_sole-sketch.png"></img>
             </div>
           </div>
         </div>
@@ -92,16 +93,32 @@
       <script type="text/javascript">
         $(document).ready(function() {
           var size = 42;
-          $('#sole').height(250);
+          var height = 250;
+          var top = 20;
+          var left = 120;
           $('#smaller').click(function() {
-            var sole = $('#sole').height();
-            $('#sole').height(sole - 10);
+            height -= 4;
+            top += 2;
+            left += 2;
+
+            var sole = $('#sole');
+            sole.css("height", height);
+            sole.css("left", left);
+            sole.css("top", top);
+
             size = size - 1;
             $('#size').html(size);
           });
           $('#bigger').click(function() {
-            var sole = $('#sole').height();
-            $('#sole').height(sole + 10);
+            height += 4;
+            top -= 2;
+            left -= 2;
+
+            var sole = $('#sole');
+            sole.css("height", height);
+            sole.css("left", left);
+            sole.css("top", top);
+
             size = size + 1;
             $('#size').html(size);
           });
